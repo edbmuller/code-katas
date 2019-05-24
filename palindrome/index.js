@@ -4,7 +4,7 @@ var output = document.querySelector('.output');
 
 form.addEventListener( 'submit', function(evt) {
   evt.preventDefault();
-  palindrome3(input.value);
+  palindrome4(input.value);
   input.value = '';
 });
 
@@ -22,7 +22,27 @@ const print = ( templateStr ) =>  {
 // Roma, me tem amor!
 // Arara
 
-/* 05.21.19 - 8 min */
+/* 05.24.19 - 3 min */
+
+const palindrome4 = (str) => {
+
+  let strClean = str.toLowerCase().replace(/[\W_]/g, '');
+  let strReversed = strClean.split('').reverse().join('');
+
+  if (strClean === strReversed) { return print(`É palindromo: ${ strReversed }`) }
+
+  return print(`Não palindromo: ${ strReversed }`);
+}
+/*
+*
+*
+*
+*
+*
+*
+*/
+
+/* 05.23.19 - 8 min */
 
 const palindrome3 = (str) => {
   let strClean = str.toLowerCase().replace(/[\W_]/g, '');
@@ -35,21 +55,7 @@ const palindrome3 = (str) => {
   return print(`Não é palindromo: ${ strReversed }`);
 }
 
-/*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*/
+
 /* 05.21.19 - 8 min */
 
 const palindrome2 = (str) => {
