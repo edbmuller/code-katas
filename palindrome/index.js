@@ -2,13 +2,13 @@ var form = document.querySelector('.form');
 var input = document.querySelector('.input');
 var output = document.querySelector('.output');
 
-form.addEventListener('submit', function(evt) {
+form.addEventListener( 'submit', function(evt) {
   evt.preventDefault();
-  palindrome2(input.value);
+  palindrome3(input.value);
   input.value = '';
 });
 
-const print = (templateStr) =>  {
+const print = ( templateStr ) =>  {
   var resultado = document.createElement('span');
   resultado.innerHTML = templateStr;
   output.appendChild(resultado);
@@ -19,18 +19,20 @@ const print = (templateStr) =>  {
 //  """""""""""""""""
 //  Get a string and check if its palindrome, beeing an word or frase that may contain non-alphanumerics characteres.
 
+// Roma, me tem amor!
+// Arara
 
 /* 05.21.19 - 8 min */
 
-const palindrome2 = (str) => {
-  let strCleaned = str.toLowerCase().replace(/[\W_]/g, '');
-  let strReversed = strCleaned.split('').reverse().join('');
+const palindrome3 = (str) => {
+  let strClean = str.toLowerCase().replace(/[\W_]/g, '');
+  let strReversed = strClean.split('').reverse().join('');
 
-  if (strReversed === strCleaned) {
-    return print(`É palindromo: ${strReversed}`);
-  } 
+  if ( strReversed === strClean ) {
+    return print(`É palindromo: ${ strReversed }`);
+  }
 
-  return print(`Não palindromo: ${strReversed}`);
+  return print(`Não é palindromo: ${ strReversed }`);
 }
 
 /*
@@ -48,6 +50,19 @@ const palindrome2 = (str) => {
 *
 *
 */
+/* 05.21.19 - 8 min */
+
+const palindrome2 = (str) => {
+  let strCleaned = str.toLowerCase().replace(/[\W_]/g, '');
+  let strReversed = strCleaned.split('').reverse().join('');
+
+  if (strReversed === strCleaned) {
+    return print(`É palindromo: ${strReversed}`);
+  } 
+
+  return print(`Não palindromo: ${strReversed}`);
+}
+
 
 /* 05.20.19 - 40 min */
 function palindrome(str) {
