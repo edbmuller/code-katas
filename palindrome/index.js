@@ -4,7 +4,7 @@ var output = document.querySelector('.output');
 
 form.addEventListener( 'submit', function(evt) {
   evt.preventDefault();
-  palindrome4(input.value);
+  palindrome5(input.value);
   input.value = '';
 });
 
@@ -22,7 +22,29 @@ const print = ( templateStr ) =>  {
 // Roma, me tem amor!
 // Arara
 
-/* 05.24.19 - 3 min */
+/*26.05.19 - 6 min */
+
+const palindrome5 = ( str ) => {
+
+  let strClean = str.toLowerCase().replace(/[\W_]/g, '');
+  let strReversed = strClean.split('').reverse().join('');
+
+  if ( strClean === strReversed ) { return print( `True | reversa: ${ strReversed } = normal: ${ strClean }` ) }
+
+  return print( `False | reversa: ${ strReversed } != normal: ${ strClean }` );
+}
+
+
+/*
+*
+*
+*
+*
+*
+*
+*/
+
+/*24.05.19 - 3 min */
 
 const palindrome4 = (str) => {
 
@@ -33,16 +55,8 @@ const palindrome4 = (str) => {
 
   return print(`Não palindromo: ${ strReversed }`);
 }
-/*
-*
-*
-*
-*
-*
-*
-*/
 
-/* 05.23.19 - 8 min */
+/*23.05.19 - 8 min */
 
 const palindrome3 = (str) => {
   let strClean = str.toLowerCase().replace(/[\W_]/g, '');
@@ -56,7 +70,7 @@ const palindrome3 = (str) => {
 }
 
 
-/* 05.21.19 - 8 min */
+/*21.05.19 - 8 min */
 
 const palindrome2 = (str) => {
   let strCleaned = str.toLowerCase().replace(/[\W_]/g, '');
@@ -70,7 +84,7 @@ const palindrome2 = (str) => {
 }
 
 
-/* 05.20.19 - 40 min */
+/*20.05.19 - 40 min */
 function palindrome(str) {
 
   var strCleaned = str.replace(/[\W_]/g, '').toLowerCase();
