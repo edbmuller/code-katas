@@ -3,7 +3,7 @@ let refresh = document.querySelector('.refresh');
 let output = document.querySelector('.output');
 
 start.addEventListener( 'click', () => {
-	fizzBuzz1();
+	fizzBuzz2();
 });
 
 refresh.addEventListener( 'click', () => {
@@ -16,6 +16,41 @@ const print = ( templateStr ) =>  {
 	resultado.innerHTML = templateStr;
 	output.appendChild(resultado);
 }
+
+
+// FizzBuzz Kata 30.05 4min
+const fizzBuzz2 = () => {
+
+	for (let i = 0; i < 100; i++) {
+		if ( i % 15 == 0 )	{
+			print('FizzBuzz');
+		} else if ( i % 5 == 0 ) {
+			print('Buzz');
+		} else if ( i % 3 == 0 ) {
+			print('Fizz');
+		} else {
+			print(i);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // FizzBuzz Kata 27.05 10min
 const fizzBuzz1 = () => {
