@@ -3,7 +3,7 @@ let refresh = document.querySelector('.refresh');
 let output = document.querySelector('.output');
 
 start.addEventListener( 'click', () => {
-	fizzBuzz4();
+	fizzBuzz5();
 });
 
 refresh.addEventListener( 'click', () => {
@@ -18,8 +18,37 @@ const print = ( templateStr ) =>  {
 }
 
 
-// FizzBuzz Kata 04.05 2min
+// FizzBuzz Kata 05.05
 
+const fizzBuzz5 = () => {
+	for (let i = 0; i < 100; i++) {
+		if ( i % 15 === 0 ) {
+			print('FizzBuzz');
+		} else if ( i % 5 === 0 ) {
+			print('Buzz');
+		} else if ( i % 3 === 0 ) {
+			print('Fizz');
+		} else {
+			print(i);
+		}		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// FizzBuzz Kata 04.05 2min
 const fizzBuzz4 = () => {
 
 	for (let i = 0; i < 100; i++) {
